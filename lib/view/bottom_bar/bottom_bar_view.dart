@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_at/view/home/home_view.dart';
+import 'package:food_at/view_model/bottom_bar_view_model.dart';
 import 'package:food_at/widgets/custom_navigation_bar.dart';
 
 class BottomBarView extends StatefulWidget {
@@ -12,27 +13,15 @@ class BottomBarView extends StatefulWidget {
 class _BottomBarViewState extends State<BottomBarView> {
   int _selectedItem = 0;
 
-  List<Widget> _pages = [
-    HomeView(),
-    HomeView(),
-    HomeView(),
-    HomeView(),
-    HomeView(),
-  ];
+  final BottomBarViewModel _bottomBarViewModel = BottomBarViewModel();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _pages[_selectedItem],
+      body: _bottomBarViewModel.pages[_selectedItem],
       bottomNavigationBar: CustomBottomNavigationBar(
-        iconList: [
-          Image.asset(
-            "assets/images/icons/home.png",
-            width: 40,
-            height: 40,
-            fit: BoxFit.fitHeight,
-          ),
-        ],
+        iconList: _bottomBarViewModel.imageList,
+        iconListActive: _bottomBarViewModel.imageListActive,
         onChange: (val) {
           setState(() {
             _selectedItem = val;

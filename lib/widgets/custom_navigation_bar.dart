@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:food_at/values/color.dart';
 
 class CustomBottomNavigationBar extends StatefulWidget {
   final int? defaultSelectedIndex;
   final Function(int)? onChange;
   final List<dynamic>? iconList;
+  final List<dynamic>? iconListActive;
 
   const CustomBottomNavigationBar(
-      {Key? key, this.defaultSelectedIndex = 0, this.iconList, this.onChange})
+      {Key? key,
+      this.defaultSelectedIndex = 0,
+      this.iconList,
+      this.onChange,
+      this.iconListActive})
       : super(key: key);
 
   @override
@@ -51,17 +57,14 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
           decoration: const BoxDecoration(
             border: Border(
               top: BorderSide(
-                color: Color.fromRGBO(217, 217, 217, 1),
+                color: AppColor.greyShade100,
               ),
             ),
           ),
           height: 80,
           width: MediaQuery.of(context).size.width / _iconList.length,
-          // child: Icon(
-          //   icon,
-          //   color: index == _selectedIndex ? Colors.black : Colors.grey,
-          // ),
-          child: icon),
+          child:
+              index == _selectedIndex ? widget.iconListActive![index] : icon),
     );
   }
 }

@@ -13,7 +13,7 @@ class _HomeViewState extends State<HomeView> {
     return Scaffold(
       appBar: AppBar(),
       body: Center(
-        child: Image.asset("assets/images/icons/home.png"),
+        child: Text("Home"),
       ),
     );
   }
