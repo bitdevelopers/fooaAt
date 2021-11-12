@@ -1,7 +1,10 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:food_at/locale/locale.dart';
 import 'package:food_at/values/styles.dart';
-import 'package:food_at/widgets/custom_app_bar.dart';
+import 'package:food_at/view/bottom_bar/bottom_bar_view.dart';
+import 'package:food_at/widgets/splach_screen_widget.dart';
 
 class SplachScreen extends StatefulWidget {
   const SplachScreen({Key? key}) : super(key: key);
@@ -12,31 +15,16 @@ class SplachScreen extends StatefulWidget {
 
 class _SplachScreenState extends State<SplachScreen> {
   @override
+  void initState() {
+    super.initState();
+    Timer(const Duration(seconds: 2), () {
+      Navigator.of(context)
+          .pushReplacement(MaterialPageRoute(builder: (_) => BottomBarView()));
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body: Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Image.asset('assets/images/splach-screen.png'),
-          RichText(
-            text: TextSpan(
-              children: [
-                TextSpan(
-                  text: "${getLang(context, 'splachScreen')}",
-                  style: Styles.textBlackSplachScreen,
-                ),
-                TextSpan(text: " Food-At", style: Styles.textGreenSplachScreen)
-              ],
-            ),
-          ),
-          Text(
-            "Find your daily goods is here",
-            style: Styles.textGreySplachScreen,
-          )
-        ],
-      ),
-    ));
+    return const Scaffold(body: SplachScreenWidget());
   }
 }
