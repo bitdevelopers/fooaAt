@@ -30,6 +30,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.green,
           accentColor: Colors.white,
         ),
+        // locale: Locale("ar"),
         localizationsDelegates: const [
           AppLocale.delegate,
           GlobalMaterialLocalizations.delegate,

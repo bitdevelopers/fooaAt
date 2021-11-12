@@ -1,6 +1,12 @@
 {
 
     "textSplachScreen":"شراء البقالة بسهولة مع",
-    "text2SplachScreen":"ابحث عن سلعك اليومية هنا"
+    "text2SplachScreen":"ابحث عن سلعك اليومية هنا",
+    "shopCategory" :"تسوق حسب الفئات",
+    "shopBrand":"تسوق حسب الماركة",
+    "shophistory":"تسوق حسب التاريخ",
+    "offers":"العروض والخصومات",
+    "Organic":"عضوي",
+    "sugar":"خالي من السكر"
 
 }

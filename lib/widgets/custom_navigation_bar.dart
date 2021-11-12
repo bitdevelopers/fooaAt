@@ -55,6 +55,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
       },
       child: Container(
           decoration: const BoxDecoration(
+            color: Colors.white,
             border: Border(
               top: BorderSide(
                 color: AppColor.greyShade100,

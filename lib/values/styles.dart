@@ -25,4 +25,12 @@ class Styles {
         1,
       ),
       fontSize: 22);
+  static TextStyle textFontSize18 = const TextStyle(
+      color: Color.fromRGBO(
+        34,
+        34,
+        34,
+        1,
+      ),
+      fontSize: 18);
 }

@@ -7,4 +7,6 @@ class AppColor {
   //color
 
   static const Color greyShade100 = Color.fromRGBO(217, 217, 217, 1);
+
+  static const Color colorHomeContainer = Color.fromRGBO(247, 247, 247, 1);
 }

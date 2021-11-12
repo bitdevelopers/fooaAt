@@ -1,7 +1,14 @@
 {
 
     "textSplachScreen":"Buy groceries easily with",
-    "text2SplachScreen":"Find your daily goods is here"
+    "text2SplachScreen":"Find your daily goods is here",
+    "shopCategory" :"Shop by Categories",
+    "shopBrand":"Shop by Brand",
+    "shophistory":"Shop by History",
+    "offers":"Offers & Discounts",
+    "Organic":"Organic",
+    "sugar":"sugar Free"
+
 
 
 }
