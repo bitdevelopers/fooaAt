@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food_at/locale/locale.dart';
+import 'package:food_at/values/styles.dart';
 import 'package:food_at/widgets/custom_app_bar.dart';
 
 class SplachScreen extends StatefulWidget {
@@ -19,38 +21,19 @@ class _SplachScreenState extends State<SplachScreen> {
         children: [
           Image.asset('assets/images/splach-screen.png'),
           RichText(
-            text: const TextSpan(
+            text: TextSpan(
               children: [
                 TextSpan(
-                  text: "Buy groceries easily with",
-                  style: TextStyle(
-                      color: Color.fromRGBO(34, 34, 34, 1), fontSize: 22),
+                  text: "${getLang(context, 'splachScreen')}",
+                  style: Styles.textBlackSplachScreen,
                 ),
-                TextSpan(
-                  text: " Food-At",
-                  style: TextStyle(
-                      color: Color.fromRGBO(
-                        84,
-                        175,
-                        118,
-                        1,
-                      ),
-                      fontSize: 22),
-                )
+                TextSpan(text: " Food-At", style: Styles.textGreenSplachScreen)
               ],
-              style: TextStyle(color: Colors.black),
             ),
           ),
-          const Text(
+          Text(
             "Find your daily goods is here",
-            style: TextStyle(
-                color: Color.fromRGBO(
-                  154,
-                  154,
-                  154,
-                  1,
-                ),
-                fontSize: 22),
+            style: Styles.textGreySplachScreen,
           )
         ],
       ),

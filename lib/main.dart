@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:food_at/locale/locale.dart';
 import 'package:food_at/view/splachScreen/splach_screen_view.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   // change color status app
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     // systemNavigationBarColor: Colors.white,
@@ -27,6 +30,26 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
           accentColor: Colors.white,
         ),
+        localizationsDelegates: const [
+          AppLocale.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate
+        ],
+        supportedLocales: const [
+          Locale('en', ''),
+          Locale('ar', ''),
+        ],
+        localeResolutionCallback: (currentLang, supportLang) {
+          if (currentLang != null) {
+            for (Locale locale in supportLang) {
+              if (locale.languageCode == currentLang.languageCode) {
+                // mySharedPreferences.setString("lang",currentLang.languageCode) ;
+                return currentLang;
+              }
+            }
+          }
+          return supportLang.first;
+        },
         home: const SplachScreen(),
       ),
     );
