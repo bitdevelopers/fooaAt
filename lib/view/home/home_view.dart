@@ -1,4 +1,7 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:food_at/values/color.dart';
+import 'package:food_at/view_model/home_view_model.dart';
 
 import 'package:food_at/widgets/custom_app_bar.dart';
 import 'package:food_at/widgets/custom_container_infinty.dart';
@@ -12,6 +15,7 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
+  final HomeViewModel _homeViewModel = HomeViewModel();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,18 +27,21 @@ class _HomeViewState extends State<HomeView> {
           child: Column(
             children: [
               const CustomContainerInfinity(
-                  image: "assets/icons/home-active.png", title: "shopCategory"),
+                  image: "assets/icons_home/category.png",
+                  title: "shopCategory"),
               const CustomContainerInfinity(
-                  image: "assets/icons/home-active.png", title: "shopBrand"),
+                  image: "assets/icons_home/shopping_Cart.png",
+                  title: "shopBrand"),
               const CustomContainerInfinity(
-                  image: "assets/icons/home-active.png", title: "shophistory"),
+                  image: "assets/icons_home/rearrange.png",
+                  title: "shophistory"),
               const CustomContainerInfinity(
-                  image: "assets/icons/home-active.png", title: "offers"),
+                  image: "assets/icons_home/shopping_tag.png", title: "offers"),
               Row(
                 children: const [
                   Expanded(
                       child: CustomHalfContainer(
-                    image: "assets/icons/home-active.png",
+                    image: "assets/icons_home/organic.png",
                     title: "Organic",
                     imageRight: false,
                   )),
@@ -43,7 +50,7 @@ class _HomeViewState extends State<HomeView> {
                   ),
                   Expanded(
                       child: CustomHalfContainer(
-                    image: "assets/icons/home-active.png",
+                    image: "assets/icons_home/sugar-free.png",
                     title: "sugar",
                     imageRight: true,
                   )),
@@ -53,8 +60,8 @@ class _HomeViewState extends State<HomeView> {
                 children: const [
                   Expanded(
                       child: CustomHalfContainer(
-                    image: "assets/icons/home-active.png",
-                    title: "Organic",
+                    image: "assets/icons_home/Oil.png",
+                    title: "Low fat",
                     imageRight: false,
                   )),
                   SizedBox(
@@ -62,8 +69,8 @@ class _HomeViewState extends State<HomeView> {
                   ),
                   Expanded(
                       child: CustomHalfContainer(
-                    image: "assets/icons/home-active.png",
-                    title: "sugar",
+                    image: "assets/icons_home/Gluten_Free.png",
+                    title: "Gluten free",
                     imageRight: true,
                   )),
                 ],
@@ -72,8 +79,8 @@ class _HomeViewState extends State<HomeView> {
                 children: const [
                   Expanded(
                       child: CustomHalfContainer(
-                    image: "assets/icons/home-active.png",
-                    title: "Organic",
+                    image: "assets/icons_home/food.png",
+                    title: "Vegan",
                     imageRight: false,
                   )),
                   SizedBox(
@@ -81,17 +88,33 @@ class _HomeViewState extends State<HomeView> {
                   ),
                   Expanded(
                       child: CustomHalfContainer(
-                    image: "assets/icons/home-active.png",
-                    title: "sugar",
+                    image: "assets/icons_home/bread.png",
+                    title: "Low carb",
                     imageRight: true,
                   )),
                 ],
               ),
+
               //slider image
               Container(
+                margin: const EdgeInsets.symmetric(vertical: 10),
                 width: double.infinity,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    color: AppColor.primaryColor),
                 height: 150,
-                color: Colors.black,
+                child: Stack(
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(15.0),
+                      child: Image.asset(
+                        "assets/images/slider_img.jpg",
+                        fit: BoxFit.cover,
+                        width: double.infinity,
+                      ),
+                    ),
+                  ],
+                ),
               )
             ],
           ),
