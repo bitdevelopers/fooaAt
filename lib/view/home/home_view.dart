@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_at/locale/locale.dart';
 import 'package:food_at/widgets/custom_app_bar.dart';
 import 'package:food_at/widgets/custom_container_infinty.dart';
 import 'package:food_at/widgets/custom_half_container.dart';

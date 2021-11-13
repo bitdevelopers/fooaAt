@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:food_at/view/home/home_view.dart';
 import 'package:food_at/view_model/bottom_bar_view_model.dart';
 import 'package:food_at/widgets/custom_navigation_bar.dart';
 
