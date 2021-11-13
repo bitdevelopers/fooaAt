@@ -1,11 +1,8 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:food_at/values/color.dart';
-import 'package:food_at/view_model/home_view_model.dart';
-
 import 'package:food_at/widgets/custom_app_bar.dart';
 import 'package:food_at/widgets/custom_container_infinty.dart';
 import 'package:food_at/widgets/custom_half_container.dart';
+import 'package:food_at/widgets/custom_slider_widget.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -15,7 +12,6 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-  final HomeViewModel _homeViewModel = HomeViewModel();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +19,7 @@ class _HomeViewState extends State<HomeView> {
       appBar: const CustomAppBar(),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 0),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
           child: Column(
             children: [
               const CustomContainerInfinity(
@@ -94,28 +90,7 @@ class _HomeViewState extends State<HomeView> {
                   )),
                 ],
               ),
-
-              //slider image
-              Container(
-                margin: const EdgeInsets.symmetric(vertical: 10),
-                width: double.infinity,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: AppColor.primaryColor),
-                height: 150,
-                child: Stack(
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(15.0),
-                      child: Image.asset(
-                        "assets/images/slider_img.jpg",
-                        fit: BoxFit.cover,
-                        width: double.infinity,
-                      ),
-                    ),
-                  ],
-                ),
-              )
+              const CustomSliderImage()
             ],
           ),
         ),

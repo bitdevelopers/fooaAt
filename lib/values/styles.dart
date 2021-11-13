@@ -33,4 +33,9 @@ class Styles {
         1,
       ),
       fontSize: 18);
+
+  static TextStyle textFontSize16White =
+      const TextStyle(color: Colors.white, fontSize: 16);
+  static TextStyle textFontSize14White =
+      const TextStyle(color: Colors.white, fontSize: 14);
 }
