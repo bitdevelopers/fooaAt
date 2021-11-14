@@ -57,7 +57,7 @@ class Styles {
       144,
       1,
     ),
-    fontSize: 20,
+    fontSize: 16,
   );
 
   static TextStyle textTitleCategory =
