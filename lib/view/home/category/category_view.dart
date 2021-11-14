@@ -16,6 +16,7 @@ class CategoryView extends StatefulWidget {
 
 class _CategoryViewState extends State<CategoryView> {
   final CategoryViewModel _categoryViewModel = CategoryViewModel();
+  // ignore: unused_field
   int _selectedItem = 0;
 
   final BottomBarViewModel _bottomBarViewModel = BottomBarViewModel();
@@ -36,8 +37,12 @@ class _CategoryViewState extends State<CategoryView> {
                   Navigator.pop(context);
                 },
               ),
+              const SizedBox(
+                height: 5.0,
+              ),
               GridView.builder(
                 itemCount: _categoryViewModel.list.length,
+                physics: const ScrollPhysics(),
                 shrinkWrap: true,
                 itemBuilder: (context, index) {
                   List<TypeCategoryModel> data = _categoryViewModel.list;
@@ -46,10 +51,10 @@ class _CategoryViewState extends State<CategoryView> {
                     children: [
                       Expanded(
                         child: CustomTypeCategory(
-                          image: "${data[index].img}",
-                          title: "${data[index].title}",
-                          subTitle: "${data[index].subTitle}",
-                        ),
+                            image: "${data[index].img}",
+                            title: "${data[index].title}",
+                            subTitle: "${data[index].subTitle}",
+                            onTap: data[index].onTap),
                       ),
                     ],
                   );
@@ -58,7 +63,7 @@ class _CategoryViewState extends State<CategoryView> {
                     maxCrossAxisExtent: 200,
                     childAspectRatio: 2.4 / 1,
                     crossAxisSpacing: 5,
-                    mainAxisSpacing: 0),
+                    mainAxisSpacing: 5),
               )
             ],
           ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_at/values/color.dart';
 
 class Styles {
   static TextStyle textBlackSplachScreen = const TextStyle(
@@ -36,12 +37,26 @@ class Styles {
 
   static TextStyle textFontSize16White =
       const TextStyle(color: Colors.white, fontSize: 16);
+  static TextStyle textFontSize16black =
+      const TextStyle(color: Colors.black, fontSize: 16);
+  static TextStyle textFontSize12PrimaryColor =
+      const TextStyle(color: AppColor.primaryColor, fontSize: 12);
   static TextStyle textFontSize14White =
       const TextStyle(color: Colors.white, fontSize: 14);
   static TextStyle textFontSize14Black =
       const TextStyle(color: Colors.black, fontSize: 14);
   static TextStyle hintSearch20 = const TextStyle(
     color: Colors.black,
+    fontSize: 20,
+  );
+
+  static TextStyle hintSearchProduct16 = const TextStyle(
+    color: Color.fromRGBO(
+      144,
+      144,
+      144,
+      1,
+    ),
     fontSize: 20,
   );
 
