@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:food_at/locale/locale.dart';
+import 'package:food_at/view/home/category/category_view.dart';
 import 'package:food_at/widgets/custom_app_bar.dart';
 import 'package:food_at/widgets/custom_container_infinty.dart';
 import 'package:food_at/widgets/custom_half_container.dart';
@@ -23,9 +23,15 @@ class _HomeViewState extends State<HomeView> {
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
           child: Column(
             children: [
-              const CustomContainerInfinity(
-                  image: "assets/icons_home/category.png",
-                  title: "shopCategory"),
+              CustomContainerInfinity(
+                image: "assets/icons_home/category.png",
+                title: "shopCategory",
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const CategoryView();
+                  }));
+                },
+              ),
               const CustomContainerInfinity(
                   image: "assets/icons_home/shopping_Cart.png",
                   title: "shopBrand"),

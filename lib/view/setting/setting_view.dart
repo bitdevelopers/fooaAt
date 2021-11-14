@@ -11,7 +11,7 @@ class SettingView extends StatefulWidget {
 class _SettingViewState extends State<SettingView> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       appBar: CustomAppBar(),
       body: Center(
         child: Text("setting"),

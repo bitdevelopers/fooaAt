@@ -28,11 +28,10 @@ class CustomHalfContainer extends StatelessWidget {
         ),
         child: imageRight == false
             ? Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Image.asset(image),
-                  const SizedBox(
-                    width: 20.0,
-                  ),
                   Flexible(
                     child: Text(
                       "${getLang(context, title)}",
@@ -42,15 +41,14 @@ class CustomHalfContainer extends StatelessWidget {
                 ],
               )
             : Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Flexible(
                     child: Text(
                       "${getLang(context, title)}",
                       style: Styles.textFontSize18,
                     ),
-                  ),
-                  const SizedBox(
-                    width: 20.0,
                   ),
                   Image.asset(image),
                 ],

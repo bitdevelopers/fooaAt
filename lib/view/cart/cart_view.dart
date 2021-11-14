@@ -11,7 +11,7 @@ class CartView extends StatefulWidget {
 class _CartViewState extends State<CartView> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       appBar: CustomAppBar(),
       body: Center(
         child: Text("cart"),

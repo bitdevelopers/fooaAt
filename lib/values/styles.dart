@@ -38,4 +38,31 @@ class Styles {
       const TextStyle(color: Colors.white, fontSize: 16);
   static TextStyle textFontSize14White =
       const TextStyle(color: Colors.white, fontSize: 14);
+  static TextStyle textFontSize14Black =
+      const TextStyle(color: Colors.black, fontSize: 14);
+  static TextStyle hintSearch20 = const TextStyle(
+    color: Colors.black,
+    fontSize: 20,
+  );
+
+  static TextStyle textTitleCategory =
+      const TextStyle(color: Colors.black, fontSize: 14);
+
+  static TextStyle textSubTitleCategory = const TextStyle(
+      color: Color.fromRGBO(
+        144,
+        144,
+        144,
+        1,
+      ),
+      fontSize: 12);
+
+  static TextStyle colorBorder = const TextStyle(
+      color: Color.fromRGBO(
+        216,
+        216,
+        216,
+        1,
+      ),
+      fontSize: 12);
 }
