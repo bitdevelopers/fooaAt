@@ -41,10 +41,21 @@ class Styles {
       const TextStyle(color: Colors.black, fontSize: 16);
   static TextStyle textFontSize12PrimaryColor =
       const TextStyle(color: AppColor.primaryColor, fontSize: 12);
+  static TextStyle textFontSize12DiscountPrimaryColor = const TextStyle(
+    color: AppColor.primaryColor,
+    fontSize: 12,
+    decoration: TextDecoration.lineThrough,
+    decorationColor: AppColor.primaryColor,
+  );
+  static TextStyle textFontSize12Red =
+      const TextStyle(color: Colors.red, fontSize: 12);
+
   static TextStyle textFontSize15Red =
       const TextStyle(color: Colors.red, fontSize: 15);
   static TextStyle textFontSize14White =
       const TextStyle(color: Colors.white, fontSize: 14);
+  static TextStyle textFontSize14black =
+      const TextStyle(color: Colors.black, fontSize: 14);
   static TextStyle textFontSize14Black =
       const TextStyle(color: Colors.black, fontSize: 14);
   static TextStyle hintSearch20 = const TextStyle(
@@ -61,6 +72,15 @@ class Styles {
     ),
     fontSize: 16,
   );
+
+  static TextStyle hintGrey12 = const TextStyle(
+      color: Color.fromRGBO(
+        144,
+        144,
+        144,
+        1,
+      ),
+      fontSize: 12);
 
   static TextStyle textTitleCategory =
       const TextStyle(color: Colors.black, fontSize: 14);

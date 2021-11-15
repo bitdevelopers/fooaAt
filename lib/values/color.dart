@@ -16,4 +16,11 @@ class AppColor {
     216,
     1,
   );
+
+  static const Color colorDivider = Color.fromRGBO(
+    216,
+    216,
+    216,
+    1,
+  );
 }
