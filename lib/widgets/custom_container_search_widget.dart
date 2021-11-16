@@ -3,7 +3,7 @@ import 'package:food_at/locale/locale.dart';
 import 'package:food_at/values/color.dart';
 import 'package:food_at/values/styles.dart';
 
-class CustomContainerSearchWidget extends StatelessWidget {
+class CustomContainerSearchWidget extends StatefulWidget {
   final String image;
   final String hint;
   final Function? onTap;
@@ -13,9 +13,17 @@ class CustomContainerSearchWidget extends StatelessWidget {
       required this.image,
       required this.hint,
       this.onTap,
-      required this.imageSearch})
+      this.imageSearch})
       : super(key: key);
 
+  @override
+  _CustomContainerSearchWidgetState createState() =>
+      _CustomContainerSearchWidgetState();
+}
+
+class _CustomContainerSearchWidgetState
+    extends State<CustomContainerSearchWidget> {
+  String enable = "";
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -35,19 +43,36 @@ class CustomContainerSearchWidget extends StatelessWidget {
               onTap: () {
                 Navigator.pop(context);
               },
-              child: Image.asset(image),
+              child: Image.asset(widget.image),
             ),
             Expanded(
                 child: TextFormField(
+              style: Styles.textFontSize16black,
+              onChanged: (val) {
+                setState(() {
+                  enable = val;
+                });
+              },
               textAlign: TextAlign.center,
               textAlignVertical: TextAlignVertical.center,
               decoration: InputDecoration(
                 isCollapsed: true,
                 contentPadding: EdgeInsets.zero,
-                prefixIcon: Image.asset(imageSearch!),
-                // ignore: unnecessary_string_interpolations
-                hintText: "${getLang(context, "$hint")}",
-                hintStyle: Styles.hintSearchProduct16,
+                prefixIcon: enable.isNotEmpty
+                    ? null
+                    : Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image.asset(widget.imageSearch!),
+                          const SizedBox(
+                            width: 10.0,
+                          ),
+                          Text(
+                            "${getLang(context, widget.hint)}",
+                            style: Styles.hintSearchProduct16,
+                          )
+                        ],
+                      ),
                 isDense: true,
                 focusedErrorBorder: OutlineInputBorder(
                     gapPadding: 60,
