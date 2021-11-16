@@ -102,8 +102,15 @@ class Styles {
       ),
       fontSize: 12);
 
-  static TextStyle textTitleCategory =
-      const TextStyle(color: Colors.black, fontSize: 14);
+  static TextStyle styleFovoriteNathigSize18 = const TextStyle(
+    color: AppColor.colorTextNathing,
+    fontSize: 18,
+  );
+
+  static TextStyle textTitleCategory = const TextStyle(
+    color: Colors.black,
+    fontSize: 14,
+  );
 
   static TextStyle textSubTitleCategory = const TextStyle(
       color: Color.fromRGBO(

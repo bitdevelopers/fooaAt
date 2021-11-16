@@ -23,4 +23,10 @@ class AppColor {
     216,
     1,
   );
+  static const Color colorTextNathing = Color.fromRGBO(
+    144,
+    144,
+    144,
+    1,
+  );
 }
