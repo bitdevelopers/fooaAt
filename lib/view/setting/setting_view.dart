@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:food_at/locale/locale.dart';
 import 'package:food_at/values/color.dart';
 import 'package:food_at/values/styles.dart';
 import 'package:food_at/widgets/custom_app_bar.dart';
 import 'package:food_at/widgets/custom_container_account.dart';
+import 'package:food_at/widgets/custom_container_information.dart';
 import 'package:food_at/widgets/custom_container_setting.dart';
 import 'package:food_at/widgets/custom_title_account.dart';
 
@@ -16,6 +18,7 @@ class SettingView extends StatefulWidget {
 }
 
 class _SettingViewState extends State<SettingView> {
+  bool enable = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,48 +28,37 @@ class _SettingViewState extends State<SettingView> {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
           child: Column(
-            children: [
-              const CustomTitleAccount(
+            children: const [
+              CustomTitleAccount(
                 image: "assets/icons/love-96.png",
                 title: "Account",
               ),
-              const SizedBox(
+              SizedBox(
                 height: 5.0,
               ),
               // container details account
-              const CustomContainerAccount(),
+              CustomContainerAccount(),
 
-              const SizedBox(
+              SizedBox(
                 height: 5.0,
               ),
-              const CustomTitleAccount(
+              CustomTitleAccount(
                 image: "assets/icons/love-96.png",
                 title: "Settings",
               ),
-              const SizedBox(
+              SizedBox(
                 height: 5.0,
               ),
-              const CustomContainerSetting(),
-              const SizedBox(
+              // container details setting
+              CustomContainerSetting(),
+              SizedBox(
                 height: 5.0,
               ),
-              const CustomTitleAccount(
+              CustomTitleAccount(
                 image: "assets/icons/love-96.png",
                 title: "Information",
               ),
-              Container(
-                width: double.infinity,
-                height: 156,
-                padding:
-                    const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                decoration: BoxDecoration(
-                  border: Border.all(color: AppColor.colorBorder),
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: Column(
-                  children: [],
-                ),
-              )
+              CustomContainerInformation(),
             ],
           ),
         ),
