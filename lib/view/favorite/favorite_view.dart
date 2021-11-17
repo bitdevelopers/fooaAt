@@ -5,9 +5,7 @@ import 'package:food_at/values/styles.dart';
 import 'package:food_at/view_model/provider/provider_data.dart';
 import 'package:food_at/widgets/custom_app_bar.dart';
 import 'package:food_at/widgets/custom_container_favorite.dart';
-import 'package:food_at/widgets/custom_container_search_widget.dart';
 import 'package:food_at/widgets/custom_title_favorite.dart';
-import 'package:food_at/widgets/render_product_image.dart';
 import 'package:provider/provider.dart';
 
 class FavoriteView extends StatefulWidget {
@@ -54,16 +52,17 @@ class _FavoriteViewState extends State<FavoriteView> {
                             height: 5.0,
                           ),
                           Column(
-                              children: model.dataFavorite
-                                  .map((e) => CustomContainerFavorite(
-                                      image: e.image,
-                                      name: e.name,
-                                      quantity: e.quantity,
-                                      discount: e.discount,
-                                      price: e.price,
-                                      newPrice: e.newPrice,
-                                      number: e.number))
-                                  .toList())
+                            children: model.dataFavorite
+                                .map((e) => CustomContainerFavorite(
+                                    image: e.image,
+                                    name: e.name,
+                                    quantity: e.quantity,
+                                    discount: e.discount,
+                                    price: e.price,
+                                    newPrice: e.newPrice,
+                                    number: e.number))
+                                .toList(),
+                          )
                         ],
                       ),
                     ),
