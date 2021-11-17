@@ -52,6 +52,23 @@
     "JD 4.80/Pc":"٤.٨٠ دينار / قطعة",
     "JD 3.80/Pc":"٣.٦٠ دينار / قطعة",
     "Your favorite is empty":"المفضلة لديك فارغة",
-    "Favorite product":"المنتجات المفضلة"
+    "Favorite product":"المنتجات المفضلة",
+    "Account":"حساب",
+    "First name":"الاسم الأول",
+    "Last name":"الكنية",
+    "Ahmad":"أحمد",
+    "kittaneh":"كتانة",
+    "Phone number":"رقم الهاتف",
+    "Location":"موقع",
+    "details location":"عمان شارع الملكة نور عمارة رقم 24",
+    "Settings":"إعدادات",
+    "language":"لغة",
+    "English":"إنجليزي",
+    "Arabic":"عربي",
+    "Information":"معلومات",
+    "Contact us":"اتصل بنا",
+    "About us":"معلومات عنا",
+    "privacy policy":"سياسة خاصة",
+    "Terms & conditions":"البنود و الظروف"
 
 }
