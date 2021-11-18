@@ -31,41 +31,42 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => LocaleProvider()),
       ],
       builder: (context, child) {
+        // ignore: unused_local_variable
+        final provider = Provider.of<LocaleProvider>(context).locale;
         return ScreenUtilInit(
-            designSize: const Size(360, 690),
-            builder: () {
-              return MaterialApp(
-                debugShowCheckedModeBanner: false,
-                title: 'Flutter Demo',
-                theme: ThemeData(
-                  primarySwatch: Colors.green,
-                  // ignore: deprecated_member_use
-                  accentColor: Colors.white,
-                ),
-                // locale: Locale("ar"),
-                localizationsDelegates: const [
-                  AppLocale.delegate,
-                  GlobalMaterialLocalizations.delegate,
-                  GlobalWidgetsLocalizations.delegate
-                ],
-                supportedLocales: const [
-                  Locale('en', ''),
-                  Locale('ar', ''),
-                ],
-                localeResolutionCallback: (currentLang, supportLang) {
-                  if (currentLang != null) {
-                    for (Locale locale in supportLang) {
-                      if (locale.languageCode == currentLang.languageCode) {
-                        // mySharedPreferences.setString("lang",currentLang.languageCode) ;
-                        return currentLang;
-                      }
-                    }
+          designSize: const Size(360, 690),
+          builder: () => MaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: 'Flutter Demo',
+            theme: ThemeData(
+              primarySwatch: Colors.green,
+              // ignore: deprecated_member_use
+              accentColor: Colors.white,
+            ),
+            locale: Provider.of<LocaleProvider>(context).locale,
+            localizationsDelegates: const [
+              AppLocale.delegate,
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate
+            ],
+            supportedLocales: const [
+              Locale('en', ''),
+              Locale('ar', ''),
+            ],
+            localeResolutionCallback: (currentLang, supportLang) {
+              if (currentLang != null) {
+                for (Locale locale in supportLang) {
+                  if (locale.languageCode == currentLang.languageCode) {
+                    // mySharedPreferences.setString("lang",currentLang.languageCode) ;
+                    return currentLang;
                   }
-                  return supportLang.first;
-                },
-                home: const SplachScreen(),
-              );
-            });
+                }
+              }
+              return supportLang.first;
+            },
+            home: const SplachScreen(),
+          ),
+        );
       },
     );
   }

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:food_at/view_model/provider/locale_provider.dart';
 import 'package:food_at/widgets/custom_app_bar.dart';
 import 'package:food_at/widgets/custom_container_account.dart';
 import 'package:food_at/widgets/custom_container_information.dart';
 import 'package:food_at/widgets/custom_container_setting.dart';
 import 'package:food_at/widgets/custom_title_account.dart';
+import 'package:provider/provider.dart';
 
 class SettingView extends StatefulWidget {
   const SettingView({Key? key}) : super(key: key);
@@ -17,47 +19,51 @@ class _SettingViewState extends State<SettingView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: const CustomAppBar(),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
-          child: Column(
-            children: const [
-              CustomTitleAccount(
-                image: "assets/icons/love-96.png",
-                title: "Account",
-              ),
-              SizedBox(
-                height: 5.0,
-              ),
-              // container details account
-              CustomContainerAccount(),
+        backgroundColor: Colors.white,
+        appBar: const CustomAppBar(),
+        body: Consumer<LocaleProvider>(
+          builder: (context, model, chils) {
+            return SingleChildScrollView(
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
+                child: Column(
+                  children: const [
+                    CustomTitleAccount(
+                      image: "assets/icons/love-96.png",
+                      title: "Account",
+                    ),
+                    SizedBox(
+                      height: 5.0,
+                    ),
+                    // container details account
+                    CustomContainerAccount(),
 
-              SizedBox(
-                height: 5.0,
+                    SizedBox(
+                      height: 5.0,
+                    ),
+                    CustomTitleAccount(
+                      image: "assets/icons/love-96.png",
+                      title: "Settings",
+                    ),
+                    SizedBox(
+                      height: 5.0,
+                    ),
+                    // container details setting
+                    CustomContainerSetting(),
+                    SizedBox(
+                      height: 5.0,
+                    ),
+                    CustomTitleAccount(
+                      image: "assets/icons/love-96.png",
+                      title: "Information",
+                    ),
+                    CustomContainerInformation(),
+                  ],
+                ),
               ),
-              CustomTitleAccount(
-                image: "assets/icons/love-96.png",
-                title: "Settings",
-              ),
-              SizedBox(
-                height: 5.0,
-              ),
-              // container details setting
-              CustomContainerSetting(),
-              SizedBox(
-                height: 5.0,
-              ),
-              CustomTitleAccount(
-                image: "assets/icons/love-96.png",
-                title: "Information",
-              ),
-              CustomContainerInformation(),
-            ],
-          ),
-        ),
-      ),
-    );
+            );
+          },
+        ));
   }
 }
