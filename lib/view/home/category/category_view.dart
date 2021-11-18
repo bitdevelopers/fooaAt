@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_at/model/type_category.dart';
+import 'package:food_at/values/color.dart';
 import 'package:food_at/view_model/bottom_bar_view_model.dart';
 import 'package:food_at/view_model/category_view_model.dart';
 import 'package:food_at/widgets/custom_app_bar.dart';
@@ -33,6 +34,7 @@ class _CategoryViewState extends State<CategoryView> {
               CustomContainerInfinity(
                 image: "assets/icons/icon_arrow_back.png",
                 title: 'shop',
+                color: AppColor.colorHomeContainer,
                 onTap: () {
                   Navigator.pop(context);
                 },

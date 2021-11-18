@@ -4,6 +4,7 @@ import 'package:food_at/locale/locale.dart';
 import 'package:food_at/model/cart_model.dart';
 import 'package:food_at/values/color.dart';
 import 'package:food_at/values/styles.dart';
+import 'package:food_at/view/checkout/checkout_view.dart';
 import 'package:food_at/view_model/cart_view_model.dart';
 import 'package:food_at/widgets/custom_app_bar.dart';
 import 'package:food_at/widgets/custom_button.dart';
@@ -112,8 +113,14 @@ class _CartViewState extends State<CartView> {
                     height: 16,
                   ),
                   // button checkout
-                  const CustomBitton(
+                  CustomBitton(
                     title: "Check out",
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return const CheckOutView();
+                      }));
+                    },
                   ),
                   const SizedBox(
                     height: 16,

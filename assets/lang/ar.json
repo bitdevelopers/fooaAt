@@ -76,6 +76,23 @@
     "Grand total":"المبلغ الإجمالي",
     "Check out":"الدفع",
     "Offers":"عروض",
-    "Add":"إضافة"
+    "Add":"إضافة",
+    "Mobile number":"رقم الهاتف المحمول",
+    "City":"مدينة",
+    "Change":"تغير",
+    "Street address":"عنوان الشارع",
+    "Building number":"رقم المبنى",
+    "Payment method":"طريقة الدفع ",
+    "Cash on delivery":"الدفع عند الاستلام",
+    "Delivery Fee":"رسوم التوصيل",
+    "Second name":"الاسم الثاني",
+    "Checkout":"الدفع",
+    "Note":"ملحوظة",
+    "Hello":"أهلا...",
+    "Place order":"تأكيد الأمر",
+    "Card holder name":"إسم صاحب البطاقة",
+    "Card number":"رقم البطاقة",
+    "Date":"تاريخ",
+    "CVV":"CVV"
 
 }

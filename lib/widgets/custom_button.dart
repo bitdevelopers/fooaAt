@@ -4,8 +4,9 @@ import 'package:food_at/values/color.dart';
 import 'package:food_at/values/styles.dart';
 
 class CustomBitton extends StatelessWidget {
+  final Function? onTap;
   final String? title;
-  const CustomBitton({Key? key, this.title}) : super(key: key);
+  const CustomBitton({Key? key, this.title, this.onTap}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,9 @@ class CustomBitton extends StatelessWidget {
       decoration: BoxDecoration(
           color: AppColor.colorButton, borderRadius: BorderRadius.circular(20)),
       child: MaterialButton(
-        onPressed: () {},
+        onPressed: () {
+          onTap!();
+        },
         child: Text(
           "${getLang(context, title.toString())}",
           style: Styles.textFontSize18White,

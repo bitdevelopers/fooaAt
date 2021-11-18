@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:food_at/locale/locale.dart';
 import 'package:food_at/values/styles.dart';
 
-class CustomContainerInfinity extends StatelessWidget {
+class CustomContainerCheckOut extends StatelessWidget {
   final String image;
   final String title;
   final Function? onTap;
   final Color? color;
-  const CustomContainerInfinity(
+  const CustomContainerCheckOut(
       {Key? key,
       required this.image,
       required this.title,
@@ -24,7 +24,7 @@ class CustomContainerInfinity extends StatelessWidget {
           onTap!();
         },
         child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 10),
           width: double.infinity,
           height: 55,
           decoration: BoxDecoration(
@@ -40,7 +40,7 @@ class CustomContainerInfinity extends StatelessWidget {
               ),
               Text(
                 "${getLang(context, title)}",
-                style: Styles.textFontSize18,
+                style: Styles.textFontSize20black,
               )
             ],
           ),

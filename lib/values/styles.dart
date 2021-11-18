@@ -45,6 +45,10 @@ class Styles {
     color: Colors.black,
     fontSize: 16,
   );
+  static TextStyle textFontSize20black = const TextStyle(
+    color: Colors.black,
+    fontSize: 20,
+  );
   static TextStyle textFontSize18black = const TextStyle(
     color: Colors.black,
     fontSize: 18,
@@ -87,6 +91,9 @@ class Styles {
 
   static TextStyle textFontSize14grey =
       const TextStyle(fontSize: 14, color: Color.fromRGBO(123, 123, 123, 1));
+
+  static TextStyle textFontSize14greyshade100 =
+      const TextStyle(fontSize: 14, color: Color.fromRGBO(154, 154, 154, 1));
   static TextStyle hintSearch20 = const TextStyle(
     color: Colors.black,
     fontSize: 20,
