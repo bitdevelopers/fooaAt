@@ -8,6 +8,8 @@ class AppColor {
 
   static const Color greyShade100 = Color.fromRGBO(217, 217, 217, 1);
 
+  static const Color colorButton = Color.fromRGBO(22, 162, 74, 1);
+
   static const Color colorHomeContainer = Color.fromRGBO(247, 247, 247, 1);
 
   static const Color colorBorder = Color.fromRGBO(

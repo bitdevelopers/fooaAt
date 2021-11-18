@@ -35,63 +35,68 @@ class CustomConatinerCart extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Image.asset("$image"),
+              SizedBox(
+                width: 16,
+              ),
               //information product
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Flexible(
-                    child: Text(
-                      "${getLang(
-                        context,
-                        "$name",
-                      )}",
-                      style: Styles.textFontSize14Black,
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Flexible(
+                      child: Text(
+                        "${getLang(
+                          context,
+                          "$name",
+                        )}",
+                        style: Styles.textFontSize14Black,
+                      ),
                     ),
-                  ),
-                  Flexible(
-                    child: Text(
-                      "${getLang(
-                        context,
-                        "$quantity",
-                      )}",
-                      style: Styles.hintGrey12,
+                    Flexible(
+                      child: Text(
+                        "${getLang(
+                          context,
+                          "$quantity",
+                        )}",
+                        style: Styles.hintGrey12,
+                      ),
                     ),
-                  ),
-                  discount == false
-                      ? Text(
-                          "${getLang(
-                            context,
-                            "$price",
-                          )}",
-                          style: Styles.textFontSize12PrimaryColor,
-                        )
-                      : Expanded(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              Text(
-                                "${getLang(
-                                  context,
-                                  "$price",
-                                )}",
-                                style:
-                                    Styles.textFontSize12DiscountPrimaryColor,
-                              ),
-                              const SizedBox(
-                                width: 5.0,
-                              ),
-                              Text(
-                                "${getLang(
-                                  context,
-                                  "$newPrice",
-                                )}",
-                                style: Styles.textFontSize12Red,
-                              ),
-                            ],
+                    discount == false
+                        ? Text(
+                            "${getLang(
+                              context,
+                              "$price",
+                            )}",
+                            style: Styles.textFontSize12PrimaryColor,
+                          )
+                        : Expanded(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Text(
+                                  "${getLang(
+                                    context,
+                                    "$price",
+                                  )}",
+                                  style:
+                                      Styles.textFontSize12DiscountPrimaryColor,
+                                ),
+                                const SizedBox(
+                                  width: 5.0,
+                                ),
+                                Text(
+                                  "${getLang(
+                                    context,
+                                    "$newPrice",
+                                  )}",
+                                  style: Styles.textFontSize12Red,
+                                ),
+                              ],
+                            ),
                           ),
-                        ),
-                ],
+                  ],
+                ),
               ),
 
               Column(

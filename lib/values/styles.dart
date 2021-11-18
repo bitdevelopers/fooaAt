@@ -34,6 +34,8 @@ class Styles {
         1,
       ),
       fontSize: 18);
+  static TextStyle textFontSize18White =
+      const TextStyle(color: Colors.white, fontSize: 18);
 
   static TextStyle textFontSize16White = const TextStyle(
     color: Colors.white,
@@ -42,6 +44,10 @@ class Styles {
   static TextStyle textFontSize16black = const TextStyle(
     color: Colors.black,
     fontSize: 16,
+  );
+  static TextStyle textFontSize18black = const TextStyle(
+    color: Colors.black,
+    fontSize: 18,
   );
   static TextStyle textFontSize12PrimaryColor = const TextStyle(
     color: AppColor.primaryColor,

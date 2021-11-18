@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:food_at/locale/locale.dart';
+import 'package:food_at/model/cart_model.dart';
+import 'package:food_at/values/color.dart';
+import 'package:food_at/values/styles.dart';
 import 'package:food_at/view_model/cart_view_model.dart';
 import 'package:food_at/widgets/custom_app_bar.dart';
+import 'package:food_at/widgets/custom_button.dart';
 import 'package:food_at/widgets/custom_container_cart.dart';
-import 'package:food_at/widgets/custom_container_favorite.dart';
-import 'package:food_at/widgets/custom_title_favorite.dart';
+import 'package:food_at/widgets/custom_list_view_cart.dart';
+import 'package:food_at/widgets/custom_title_cart.dart';
 
 class CartView extends StatefulWidget {
   const CartView({Key? key}) : super(key: key);
@@ -26,7 +32,7 @@ class _CartViewState extends State<CartView> {
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
               child: Column(
                 children: [
-                  const CustomTitleFavorite(),
+                  const CustomTitleCart(),
                   Column(
                     children: _cartViewModel.cartData
                         .map(
@@ -43,32 +49,105 @@ class _CartViewState extends State<CartView> {
                 ],
               ),
             ),
+            const SizedBox(
+              height: 10,
+            ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
-              child: Container(
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text("Sub Total"),
-                        Text("JOD 7.80"),
-                      ],
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "${getLang(context, "Sub Total")}",
+                        style: Styles.textFontSize16black,
+                      ),
+                      Text(
+                        "JOD 7.80",
+                        style: Styles.textFontSize16black,
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "${getLang(context, "Delivery")}",
+                        style: Styles.textFontSize16black,
+                      ),
+                      Text(
+                        "JOD 0.99",
+                        style: Styles.textFontSize16black,
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  const Divider(
+                    height: 5,
+                    color: AppColor.colorDivider,
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "${getLang(context, "Grand total")}",
+                        style: Styles.textFontSize16black,
+                      ),
+                      Text(
+                        "JOD 8.80",
+                        style: Styles.textFontSize16black,
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  // button checkout
+                  const CustomBitton(
+                    title: "Check out",
+                  ),
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "${getLang(context, "Offers")}",
+                        style: Styles.textFontSize18black,
+                      ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 5,
+                  ),
+                  // List view Offers
+                  SizedBox(
+                    height: 110,
+                    child: ListView.builder(
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: 4,
+                      itemBuilder: (context, index) {
+                        List<CartModel> data = _cartViewModel.cartData;
+                        return CustomListViewCart(
+                          image: data[index].image,
+                        );
+                      },
                     ),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text("Delivery"),
-                        Text("JOD 0.99"),
-                      ],
-                    ),
-                  ],
-                ),
+                  )
+                ],
               ),
-            )
+            ),
           ],
         ),
       ),
