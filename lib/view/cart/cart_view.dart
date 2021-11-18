@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_at/view_model/cart_view_model.dart';
 import 'package:food_at/widgets/custom_app_bar.dart';
+import 'package:food_at/widgets/custom_container_cart.dart';
 import 'package:food_at/widgets/custom_container_favorite.dart';
 import 'package:food_at/widgets/custom_title_favorite.dart';
 
@@ -28,16 +29,44 @@ class _CartViewState extends State<CartView> {
                   const CustomTitleFavorite(),
                   Column(
                     children: _cartViewModel.cartData
-                        .map((e) => CustomContainerFavorite(
-                            image: e.image,
-                            name: e.name,
-                            quantity: e.quantity,
-                            discount: false,
-                            price: e.price,
-                            number: 100))
+                        .map(
+                          (e) => CustomConatinerCart(
+                              image: e.image,
+                              name: e.name,
+                              quantity: e.quantity,
+                              discount: false,
+                              price: e.price,
+                              number: 100),
+                        )
                         .toList(),
                   )
                 ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
+              child: Container(
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text("Sub Total"),
+                        Text("JOD 7.80"),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text("Delivery"),
+                        Text("JOD 0.99"),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             )
           ],
