@@ -1,9 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:food_at/locale/locale.dart';
-import 'package:food_at/values/color.dart';
-import 'package:food_at/values/styles.dart';
 import 'package:food_at/widgets/custom_app_bar.dart';
 import 'package:food_at/widgets/custom_container_account.dart';
 import 'package:food_at/widgets/custom_container_information.dart';

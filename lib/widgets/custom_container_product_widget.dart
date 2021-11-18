@@ -34,7 +34,7 @@ class CustomContainerProduct extends StatelessWidget {
                   children: [
                     Flexible(
                       child: Text(
-                        "${getLang(context, "${name}")}",
+                        "${getLang(context, "$name")}",
                         style: Styles.textFontSize16black,
                       ),
                     ),

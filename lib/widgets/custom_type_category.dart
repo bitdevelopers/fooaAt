@@ -52,7 +52,7 @@ class CustomTypeCategory extends StatelessWidget {
                         style: Styles.textTitleCategory,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 5.0,
                     ),
                     Flexible(

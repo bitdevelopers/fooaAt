@@ -18,6 +18,7 @@ class Product1View extends StatefulWidget {
 }
 
 class _Product1ViewState extends State<Product1View> {
+  // ignore: unused_field
   int _selectedItem = 0;
 
   final BottomBarViewModel _bottomBarViewModel = BottomBarViewModel();

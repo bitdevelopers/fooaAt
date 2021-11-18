@@ -10,7 +10,11 @@ class ProviderData extends ChangeNotifier {
 
   String get search => _search;
 
-  List<ProductImageModel> _dataFavorite = [];
+  int _typePayment = 2;
+
+  int get typePayment => _typePayment;
+
+  final List<ProductImageModel> _dataFavorite = [];
 
   List<ProductImageModel> get dataFavorite => _dataFavorite;
 
@@ -26,6 +30,11 @@ class ProviderData extends ChangeNotifier {
 
   void addFavorite(ProductImageModel val) {
     _dataFavorite.add(val);
+    notifyListeners();
+  }
+
+  void setTypePayment(int val) {
+    _typePayment = val;
     notifyListeners();
   }
 }
