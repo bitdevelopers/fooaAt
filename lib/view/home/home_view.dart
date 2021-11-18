@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_at/values/color.dart';
 import 'package:food_at/view/home/category/category_view.dart';
 import 'package:food_at/widgets/custom_app_bar.dart';
 import 'package:food_at/widgets/custom_container_infinty.dart';
@@ -26,6 +27,7 @@ class _HomeViewState extends State<HomeView> {
               CustomContainerInfinity(
                 image: "assets/icons_home/category.png",
                 title: "shopCategory",
+                color: AppColor.colorHomeContainer,
                 onTap: () {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
                     return const CategoryView();
@@ -33,13 +35,20 @@ class _HomeViewState extends State<HomeView> {
                 },
               ),
               const CustomContainerInfinity(
-                  image: "assets/icons_home/shopping_Cart.png",
-                  title: "shopBrand"),
+                image: "assets/icons_home/shopping_Cart.png",
+                title: "shopBrand",
+                color: AppColor.colorHomeContainer,
+              ),
               const CustomContainerInfinity(
-                  image: "assets/icons_home/rearrange.png",
-                  title: "shophistory"),
+                image: "assets/icons_home/rearrange.png",
+                title: "shophistory",
+                color: AppColor.colorHomeContainer,
+              ),
               const CustomContainerInfinity(
-                  image: "assets/icons_home/shopping_tag.png", title: "offers"),
+                image: "assets/icons_home/shopping_tag.png",
+                title: "offers",
+                color: AppColor.colorHomeContainer,
+              ),
               Row(
                 children: const [
                   Expanded(
