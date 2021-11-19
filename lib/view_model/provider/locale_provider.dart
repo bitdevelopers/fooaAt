@@ -29,12 +29,12 @@ class LocaleProvider extends ChangeNotifier {
   }
 
   fetchLocale() async {
-    var prefs = await SharedPreferences.getInstance();
-    if (prefs.getString('language_code') == null) {
-      _locale = const Locale('en');
-      return Null;
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    String? langugae = prefs.getString('language_code');
+    try {
+      return langugae;
+    } catch (err) {
+      return Future(() => null);
     }
-    _locale = Locale(prefs.getString('language_code').toString());
-    return prefs;
   }
 }

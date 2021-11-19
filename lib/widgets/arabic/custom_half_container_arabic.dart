@@ -3,11 +3,11 @@ import 'package:food_at/locale/locale.dart';
 import 'package:food_at/values/color.dart';
 import 'package:food_at/values/styles.dart';
 
-class CustomHalfContainer extends StatelessWidget {
+class CustomHalfContainerArabic extends StatelessWidget {
   final String image;
   final String title;
   final bool imageRight;
-  const CustomHalfContainer(
+  const CustomHalfContainerArabic(
       {Key? key,
       required this.image,
       required this.title,
@@ -28,22 +28,6 @@ class CustomHalfContainer extends StatelessWidget {
         ),
         child: imageRight == false
             ? Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Image.asset(image),
-                  const SizedBox(
-                    width: 20.0,
-                  ),
-                  Flexible(
-                    child: Text(
-                      "${getLang(context, title)}",
-                      style: Styles.textFontSize18,
-                    ),
-                  )
-                ],
-              )
-            : Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -54,6 +38,19 @@ class CustomHalfContainer extends StatelessWidget {
                     ),
                   ),
                   Image.asset(image),
+                ],
+              )
+            : Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Image.asset(image),
+                  Flexible(
+                    child: Text(
+                      "${getLang(context, title)}",
+                      style: Styles.textFontSize18,
+                    ),
+                  ),
                 ],
               ),
       ),

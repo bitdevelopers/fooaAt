@@ -41,7 +41,6 @@ class CustomContainerSetting extends StatelessWidget {
                   onTap: () {
                     model.setLocale(const Locale("en"));
                     model.changeLanguage(const Locale("en"));
-                    model.fetchLocale().then((e) => print(e));
                   },
                   child: Row(
                     children: [
