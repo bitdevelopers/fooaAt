@@ -18,10 +18,6 @@ class Product1View extends StatefulWidget {
 }
 
 class _Product1ViewState extends State<Product1View> {
-  // ignore: unused_field
-  int _selectedItem = 0;
-
-  final BottomBarViewModel _bottomBarViewModel = BottomBarViewModel();
   final ProductViewModel _productViewModel = ProductViewModel();
   @override
   Widget build(BuildContext context) {
@@ -82,16 +78,6 @@ class _Product1ViewState extends State<Product1View> {
             ],
           );
         },
-      ),
-      bottomNavigationBar: CustomBottomNavigationBar(
-        iconList: _bottomBarViewModel.imageList,
-        iconListActive: _bottomBarViewModel.imageListActive,
-        onChange: (val) {
-          setState(() {
-            _selectedItem = val;
-          });
-        },
-        defaultSelectedIndex: 0,
       ),
     );
   }

@@ -12,7 +12,8 @@ import 'package:food_at/widgets/custom_list_view_cart.dart';
 import 'package:food_at/widgets/custom_title_cart.dart';
 
 class CartView extends StatefulWidget {
-  const CartView({Key? key}) : super(key: key);
+  final Function? onTap;
+  const CartView({Key? key, this.onTap}) : super(key: key);
 
   @override
   _CartViewState createState() => _CartViewState();
@@ -115,10 +116,7 @@ class _CartViewState extends State<CartView> {
                   CustomBitton(
                     title: "Check out",
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) {
-                        return const CheckOutView();
-                      }));
+                      widget.onTap!();
                     },
                   ),
                   const SizedBox(
