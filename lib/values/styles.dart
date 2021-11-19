@@ -54,7 +54,7 @@ class Styles {
     fontSize: 18,
   );
   static TextStyle textFontSize12PrimaryColor = const TextStyle(
-    color: AppColor.primaryColor,
+    color: AppColor.colorButton,
     fontSize: 12,
   );
   static TextStyle textFontSize12DiscountPrimaryColor = const TextStyle(
