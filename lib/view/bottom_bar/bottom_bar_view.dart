@@ -6,7 +6,9 @@ import 'package:food_at/view/home/home_view.dart';
 import 'package:food_at/view/search/search_view.dart';
 import 'package:food_at/view/setting/setting_view.dart';
 import 'package:food_at/view_model/bottom_bar_view_model.dart';
+import 'package:food_at/view_model/provider/locale_provider.dart';
 import 'package:food_at/widgets/custom_navigation_bar.dart';
+import 'package:provider/provider.dart';
 
 class BottomBarView extends StatefulWidget {
   const BottomBarView({Key? key}) : super(key: key);
@@ -29,6 +31,7 @@ class _BottomBarViewState extends State<BottomBarView> {
 
   @override
   Widget build(BuildContext context) {
+    final locale = Provider.of<LocaleProvider>(context);
     return WillPopScope(
       onWillPop: () async {
         final isFirstRouteInCurrentTab =
@@ -46,16 +49,33 @@ class _BottomBarViewState extends State<BottomBarView> {
             _buildOffstageNavigator(4),
           ],
         ),
-        bottomNavigationBar: CustomBottomNavigationBar(
-          iconList: _bottomBarViewModel.imageList,
-          iconListActive: _bottomBarViewModel.imageListActive,
-          onChange: (val) {
-            setState(() {
-              _selectedItem = val;
-            });
-          },
-          defaultSelectedIndex: 0,
-        ),
+        bottomNavigationBar: locale.locale == const Locale("en")
+            ? Directionality(
+                textDirection: TextDirection.ltr,
+                child: CustomBottomNavigationBar(
+                  iconList: _bottomBarViewModel.imageList,
+                  iconListActive: _bottomBarViewModel.imageListActive,
+                  onChange: (val) {
+                    setState(() {
+                      _selectedItem = val;
+                    });
+                  },
+                  defaultSelectedIndex: 0,
+                ),
+              )
+            : Directionality(
+                textDirection: TextDirection.ltr,
+                child: CustomBottomNavigationBar(
+                  iconList: _bottomBarViewModel.imageList,
+                  iconListActive: _bottomBarViewModel.imageListActive,
+                  onChange: (val) {
+                    setState(() {
+                      _selectedItem = val;
+                    });
+                  },
+                  defaultSelectedIndex: 0,
+                ),
+              ),
       ),
     );
   }
