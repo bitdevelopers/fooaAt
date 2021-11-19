@@ -37,7 +37,7 @@ class _CustomContainerInformationState
             },
             trailing: enable
                 ? Image.asset("assets/icons/icons8-expand-arrow-100.png")
-                : SvgPicture.asset("assets/icons/arrow-ios.svg"),
+                : SvgPicture.asset("assets/icon_svg/arrow-ios.svg"),
             tilePadding: const EdgeInsets.all(0),
             title: Text(
               "${getLang(context, "Contact us")}",
@@ -49,7 +49,7 @@ class _CustomContainerInformationState
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      SvgPicture.asset("assets/icons/icons8-mail-100.svg"),
+                      SvgPicture.asset("assets/icon_svg/icons8-mail-100.svg"),
                       const SizedBox(
                         width: 5.0,
                       ),
@@ -62,7 +62,7 @@ class _CustomContainerInformationState
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      SvgPicture.asset("assets/icons/icons8-phone-100.svg"),
+                      SvgPicture.asset("assets/icon_svg/icons8-phone-100.svg"),
                       const SizedBox(
                         width: 5.0,
                       ),

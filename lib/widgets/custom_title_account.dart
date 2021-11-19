@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:food_at/locale/locale.dart';
+import 'package:food_at/values/color.dart';
 
 class CustomTitleAccount extends StatelessWidget {
   final String? image;
@@ -14,7 +16,16 @@ class CustomTitleAccount extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Image.asset("$image"),
+          Container(
+            width: 30,
+            height: 30,
+            padding: const EdgeInsets.all(3),
+            decoration: BoxDecoration(
+              color: AppColor.colorButton,
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: SvgPicture.asset("$image"),
+          ),
           const SizedBox(
             width: 16,
           ),

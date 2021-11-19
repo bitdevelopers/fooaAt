@@ -5,19 +5,21 @@ import 'package:food_at/values/color.dart';
 import 'package:food_at/values/styles.dart';
 
 class CustomContainerAccount extends StatelessWidget {
-  const CustomContainerAccount({Key? key}) : super(key: key);
+  final Locale? locale;
+  const CustomContainerAccount({Key? key, this.locale}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity.w,
-      height: 160,
+      height: locale == const Locale("en") ? 175 : 175.h,
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
       decoration: BoxDecoration(
         border: Border.all(color: AppColor.colorBorder),
         borderRadius: BorderRadius.circular(15),
       ),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -28,6 +30,9 @@ class CustomContainerAccount extends StatelessWidget {
                   Text(
                     "${getLang(context, "First name")}",
                     style: Styles.textFontSize14grey,
+                  ),
+                  const SizedBox(
+                    height: 5.0,
                   ),
                   Text(
                     "${getLang(context, "Ahmad")}",
@@ -57,7 +62,7 @@ class CustomContainerAccount extends StatelessWidget {
             ],
           ),
           const SizedBox(
-            height: 10,
+            height: 5.0,
           ),
           Row(
             children: [
@@ -80,7 +85,7 @@ class CustomContainerAccount extends StatelessWidget {
             ],
           ),
           const SizedBox(
-            height: 10,
+            height: 5.0,
           ),
           Row(
             children: [

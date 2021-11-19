@@ -14,7 +14,7 @@ class CustomContainerSetting extends StatelessWidget {
     return Consumer<LocaleProvider>(builder: (context, model, child) {
       return Container(
         width: double.infinity,
-        height: 72,
+        height: 80,
         padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
         decoration: BoxDecoration(
           border: Border.all(color: AppColor.colorBorder),
@@ -44,7 +44,7 @@ class CustomContainerSetting extends StatelessWidget {
                   },
                   child: Row(
                     children: [
-                      SvgPicture.asset("assets/icons/arabic.svg"),
+                      SvgPicture.asset("assets/icon_svg/english.svg"),
                       const SizedBox(
                         width: 5.0,
                       ),
@@ -60,12 +60,13 @@ class CustomContainerSetting extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
+                    //change language t ar
                     model.setLocale(const Locale("ar"));
                     model.changeLanguage(const Locale("ar"));
                   },
                   child: Row(
                     children: [
-                      SvgPicture.asset("assets/icons/arabic.svg"),
+                      SvgPicture.asset("assets/icon_svg/jordan.svg"),
                       const SizedBox(
                         width: 5.0,
                       ),

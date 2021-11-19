@@ -28,37 +28,39 @@ class _SettingViewState extends State<SettingView> {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
                 child: Column(
-                  children: const [
-                    CustomTitleAccount(
-                      image: "assets/icons/love-96.png",
+                  children: [
+                    const CustomTitleAccount(
+                      image: "assets/icon_svg/account.svg",
                       title: "Account",
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 5.0,
                     ),
                     // container details account
-                    CustomContainerAccount(),
+                    CustomContainerAccount(
+                      locale: model.locale,
+                    ),
 
-                    SizedBox(
+                    const SizedBox(
                       height: 5.0,
                     ),
-                    CustomTitleAccount(
-                      image: "assets/icons/love-96.png",
+                    const CustomTitleAccount(
+                      image: "assets/icon_svg/settings.svg",
                       title: "Settings",
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 5.0,
                     ),
                     // container details setting
-                    CustomContainerSetting(),
-                    SizedBox(
+                    const CustomContainerSetting(),
+                    const SizedBox(
                       height: 5.0,
                     ),
-                    CustomTitleAccount(
-                      image: "assets/icons/love-96.png",
+                    const CustomTitleAccount(
+                      image: "assets/icon_svg/information.svg",
                       title: "Information",
                     ),
-                    CustomContainerInformation(),
+                    const CustomContainerInformation(),
                   ],
                 ),
               ),

@@ -11,7 +11,14 @@ class CustomContainerCompletePurchaes extends StatelessWidget {
         bottom: 0,
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 16),
-          color: Colors.white,
+          decoration: BoxDecoration(color: Colors.white, boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.6),
+              offset: const Offset(0, 10),
+              blurRadius: 10,
+              spreadRadius: 5,
+            )
+          ]),
           width: MediaQuery.of(context).size.width,
           height: 100,
           child: Column(
