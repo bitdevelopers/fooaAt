@@ -33,7 +33,7 @@ class CustomHalfContainer extends StatelessWidget {
                 children: [
                   Image.asset(image),
                   const SizedBox(
-                    width: 25.0,
+                    width: 30.0,
                   ),
                   Flexible(
                     child: Text(

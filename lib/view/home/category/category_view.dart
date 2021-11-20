@@ -57,7 +57,10 @@ class _CategoryViewState extends State<CategoryView> {
                     physics: const ScrollPhysics(),
                     shrinkWrap: true,
                     itemBuilder: (context, index) {
-                      List<TypeCategoryModel> data = _categoryViewModel.list;
+                      List<TypeCategoryModel> data =
+                          model.locale == const Locale("en")
+                              ? _categoryViewModel.list
+                              : _categoryViewModel.listArabic;
                       return Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [

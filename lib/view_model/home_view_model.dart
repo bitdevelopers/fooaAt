@@ -55,6 +55,38 @@ class HomeViewModel {
       imageRight: true,
     ),
   ];
+  List<HomeModel> listHorzentalArabic = [
+    HomeModel(
+      image: "assets/icons_home/sugar-free.png",
+      title: "sugar",
+      imageRight: true,
+    ),
+    HomeModel(
+      image: "assets/icons_home/organic.png",
+      title: "Organic",
+      imageRight: false,
+    ),
+    HomeModel(
+      image: "assets/icons_home/Gluten_Free.png",
+      title: "Gluten free",
+      imageRight: true,
+    ),
+    HomeModel(
+      image: "assets/icons_home/Oil.png",
+      title: "Low fat",
+      imageRight: false,
+    ),
+    HomeModel(
+      image: "assets/icons_home/bread.png",
+      title: "Low carb",
+      imageRight: true,
+    ),
+    HomeModel(
+      image: "assets/icons_home/food.png",
+      title: "Vegan",
+      imageRight: false,
+    ),
+  ];
 
   List<SliderImageModel> listSlider = [
     SliderImageModel(

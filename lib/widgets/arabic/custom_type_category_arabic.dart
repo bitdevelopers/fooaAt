@@ -40,8 +40,11 @@ class CustomTypeCategoryArabic extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Expanded(flex: 2, child: Image.asset(image)),
+              const SizedBox(
+                width: 5,
+              ),
               Expanded(
-                flex: 2,
+                flex: 3,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,

@@ -3,6 +3,7 @@ import 'package:food_at/view/cart/cart_view.dart';
 import 'package:food_at/view/checkout/checkout_view.dart';
 import 'package:food_at/view/favorite/favorite_view.dart';
 import 'package:food_at/view/home/home_view.dart';
+import 'package:food_at/view/order/order_view.dart';
 import 'package:food_at/view/search/search_view.dart';
 import 'package:food_at/view/setting/setting_view.dart';
 import 'package:food_at/view_model/bottom_bar_view_model.dart';
@@ -98,6 +99,9 @@ class _BottomBarViewState extends State<BottomBarView> {
           const SettingView(),
         ].elementAt(index);
       },
+      '/order': (context) {
+        return const OrderView();
+      }
     };
   }
 

@@ -3,7 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_at/locale/locale.dart';
 import 'package:food_at/values/color.dart';
 import 'package:food_at/values/styles.dart';
+import 'package:food_at/view/order/order_view.dart';
+import 'package:food_at/view_model/provider/locale_provider.dart';
 import 'package:food_at/view_model/provider/provider_data.dart';
+import 'package:food_at/widgets/arabic/custom_container_ckeckout_arabic.dart';
 import 'package:food_at/widgets/custom_app_bar.dart';
 import 'package:food_at/widgets/custom_button.dart';
 import 'package:food_at/widgets/custom_container_checkout.dart';
@@ -28,20 +31,30 @@ class _CheckOutViewState extends State<CheckOutView> {
         appBar: const CustomAppBar(),
         body: Consumer<ProviderData>(
           builder: (context, model, child) {
+            final locale = Provider.of<LocaleProvider>(context);
             return SingleChildScrollView(
               child: Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 0),
                 child: Column(
                   children: [
-                    CustomContainerCheckOut(
-                      image: "assets/icons/icon_arrow_back.png",
-                      title: 'Checkout',
-                      color: Colors.white,
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                    ),
+                    locale.locale == const Locale("en")
+                        ? CustomContainerCheckOut(
+                            image: "assets/icons/icon_arrow_back.png",
+                            title: 'Checkout',
+                            color: Colors.white,
+                            onTap: () {
+                              Navigator.pop(context);
+                            },
+                          )
+                        : CustomContainerCheckOutArabic(
+                            image: "assets/icons/ios-arrow-arabic.svg",
+                            title: 'Checkout',
+                            color: Colors.white,
+                            onTap: () {
+                              Navigator.pop(context);
+                            },
+                          ),
                     const SizedBox(
                       height: 5.0,
                     ),
@@ -218,7 +231,12 @@ class _CheckOutViewState extends State<CheckOutView> {
                       padding: const EdgeInsets.symmetric(vertical: 16),
                       child: CustomBitton(
                         title: "Place order",
-                        onTap: () {},
+                        onTap: () {
+                          // Navigator.push(context,
+                          //     MaterialPageRoute(builder: (context) {
+                          //   return OrderView();
+                          // }));
+                        },
                       ),
                     )
                   ],

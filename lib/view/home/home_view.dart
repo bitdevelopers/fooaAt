@@ -57,7 +57,10 @@ class _HomeViewState extends State<HomeView> {
                       physics: const ScrollPhysics(),
                       shrinkWrap: true,
                       itemBuilder: (context, index) {
-                        List<HomeModel> data = _homeViewModel.listHorzental;
+                        List<HomeModel> data =
+                            model.locale == const Locale("en")
+                                ? _homeViewModel.listHorzental
+                                : _homeViewModel.listHorzentalArabic;
                         return Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
