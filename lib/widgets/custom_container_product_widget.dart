@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_at/locale/locale.dart';
 import 'package:food_at/values/color.dart';
 import 'package:food_at/values/styles.dart';
@@ -24,7 +25,7 @@ class CustomContainerProduct extends StatelessWidget {
             child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 width: 175,
-                height: 41,
+                height: 45,
                 decoration: BoxDecoration(
                   color: AppColor.colorHomeContainer,
                   borderRadius: BorderRadius.circular(15.0),

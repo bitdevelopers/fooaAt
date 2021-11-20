@@ -91,7 +91,7 @@ class CustomTypePayment extends StatelessWidget {
                   style: Styles.textFontSize14greyshade100,
                 ),
                 Text(
-                  "${getLang(context, "Delivery")}",
+                  "${getLang(context, "dev")}",
                   style: Styles.textFontSize14greyshade100,
                 ),
               ],

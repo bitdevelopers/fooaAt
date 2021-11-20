@@ -20,7 +20,7 @@ class CustomHalfContainerArabic extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 5),
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         width: double.infinity,
         height: 55.h,
         decoration: BoxDecoration(

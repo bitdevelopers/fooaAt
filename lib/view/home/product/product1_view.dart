@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:food_at/model/product_model.dart';
-import 'package:food_at/view_model/bottom_bar_view_model.dart';
 import 'package:food_at/view_model/product_view_model.dart';
 import 'package:food_at/view_model/provider/locale_provider.dart';
 import 'package:food_at/view_model/provider/provider_data.dart';
