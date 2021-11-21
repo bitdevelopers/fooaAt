@@ -18,7 +18,7 @@ class HomeViewModel {
       title: "shophistory",
     ),
     HomeModel(
-      image: "assets/icons_home/shopping tag.svg",
+      image: "assets/icons_home/rearrange.svg",
       title: "offers",
     ),
   ];

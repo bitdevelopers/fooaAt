@@ -8,7 +8,6 @@ import 'package:food_at/widgets/arabic/custom_half_container_arabic.dart';
 import 'package:food_at/widgets/custom_app_bar.dart';
 import 'package:food_at/widgets/custom_container_infinty.dart';
 import 'package:food_at/widgets/custom_half_container.dart';
-import 'package:food_at/widgets/custom_slider_widget.dart';
 import 'package:food_at/widgets/slider_widget.dart';
 import 'package:provider/provider.dart';
 
