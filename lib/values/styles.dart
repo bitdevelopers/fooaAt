@@ -118,6 +118,15 @@ class Styles {
       ),
       fontSize: 12);
 
+  static TextStyle hintMap = const TextStyle(
+      color: Color.fromRGBO(
+        154,
+        154,
+        154,
+        1,
+      ),
+      fontSize: 12);
+
   static TextStyle styleFovoriteNathigSize18 = const TextStyle(
     color: AppColor.colorTextNathing,
     fontSize: 18,

@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_at/locale/locale.dart';
 import 'package:food_at/values/color.dart';
 import 'package:food_at/values/styles.dart';
-import 'package:food_at/view/order/order_view.dart';
+import 'package:food_at/view/checkout/sub_map/sub_map.dart';
 import 'package:food_at/view_model/provider/locale_provider.dart';
 import 'package:food_at/view_model/provider/provider_data.dart';
 import 'package:food_at/widgets/arabic/custom_container_ckeckout_arabic.dart';
@@ -11,6 +11,7 @@ import 'package:food_at/widgets/custom_app_bar.dart';
 import 'package:food_at/widgets/custom_button.dart';
 import 'package:food_at/widgets/custom_container_checkout.dart';
 import 'package:food_at/widgets/custom_container_type_payment.dart';
+import 'package:food_at/widgets/custom_current_location.dart';
 import 'package:food_at/widgets/custom_details_cash.dart';
 import 'package:food_at/widgets/custom_details_visa.dart';
 import 'package:food_at/widgets/custom_text_form.dart';
@@ -184,14 +185,7 @@ class _CheckOutViewState extends State<CheckOutView> {
                     const SizedBox(
                       height: 5,
                     ),
-                    SizedBox(
-                      width: double.infinity,
-                      height: 160.h,
-                      child: Image.asset(
-                        "assets/images/map.png",
-                        fit: BoxFit.cover,
-                      ),
-                    ),
+                    const CustomCurrentLocation(),
                     const SizedBox(
                       height: 5,
                     ),
@@ -231,12 +225,7 @@ class _CheckOutViewState extends State<CheckOutView> {
                       padding: const EdgeInsets.symmetric(vertical: 16),
                       child: CustomBitton(
                         title: "Place order",
-                        onTap: () {
-                          // Navigator.push(context,
-                          //     MaterialPageRoute(builder: (context) {
-                          //   return OrderView();
-                          // }));
-                        },
+                        onTap: () {},
                       ),
                     )
                   ],

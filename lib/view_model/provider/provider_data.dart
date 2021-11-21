@@ -21,6 +21,10 @@ class ProviderData extends ChangeNotifier {
   void setComplete(bool value) {
     _complete = value;
     notifyListeners();
+    Future.delayed(const Duration(milliseconds: 1000), () {
+      _complete = false;
+      notifyListeners();
+    });
   }
 
   void setSearch(String val) {
