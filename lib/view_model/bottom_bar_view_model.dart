@@ -15,48 +15,55 @@ class BottomBarViewModel {
     Image.asset(
       "assets/icons/feather.png",
     ),
-    Column(
-      mainAxisAlignment: MainAxisAlignment.start,
+    Stack(
       children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            Container(
-              margin: EdgeInsets.only(top: 10),
-              width: 20,
-              height: 20,
-              alignment: Alignment.center,
-              decoration: BoxDecoration(
-                color: AppColor.primaryColor,
-                borderRadius: BorderRadius.circular(25),
-              ),
-              child: const Text(
-                "25",
-                style: TextStyle(
-                  fontSize: 12,
-                  color: Colors.white,
-                ),
-                textAlign: TextAlign.center,
-              ),
+        Positioned(
+          top: 10,
+          left: 10,
+          child: Container(
+            width: 20,
+            height: 20,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: AppColor.colorButton,
+              borderRadius: BorderRadius.circular(25),
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.end,
+            child: const Text(
+              "25",
+              style: TextStyle(
+                fontSize: 12,
+                color: Colors.white,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
+        ),
+        Positioned(
+            top: 7,
+            right: 7,
+            child: Column(
               children: const [
                 Text(
                   "100",
-                  style: TextStyle(color: AppColor.primaryColor, fontSize: 12),
+                  style: TextStyle(
+                      color: AppColor.colorButton,
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold),
                 ),
                 Text(
                   "JD",
-                  style: TextStyle(color: AppColor.primaryColor, fontSize: 12),
-                )
+                  style: TextStyle(
+                      color: AppColor.colorButton,
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold),
+                ),
               ],
-            )
-          ],
-        ),
-        Image.asset(
-          "assets/icons/group.png",
+            )),
+        Align(
+          alignment: Alignment.center,
+          child: Image.asset(
+            "assets/icons/group.png",
+          ),
         ),
       ],
     ),
