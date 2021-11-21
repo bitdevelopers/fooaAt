@@ -35,7 +35,7 @@ class CustomContainerInfinityArabic extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              SvgPicture.asset("$image"),
+              SvgPicture.asset(image),
               const SizedBox(
                 width: 20.0,
               ),

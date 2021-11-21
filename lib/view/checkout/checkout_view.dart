@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:food_at/locale/locale.dart';
 import 'package:food_at/values/color.dart';
 import 'package:food_at/values/styles.dart';
-import 'package:food_at/view/checkout/sub_map/sub_map.dart';
 import 'package:food_at/view_model/provider/locale_provider.dart';
 import 'package:food_at/view_model/provider/provider_data.dart';
 import 'package:food_at/widgets/arabic/custom_container_ckeckout_arabic.dart';
