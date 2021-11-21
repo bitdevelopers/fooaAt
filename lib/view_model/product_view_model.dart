@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:food_at/model/product_image_model.dart';
 import 'package:food_at/model/product_model.dart';
 import 'package:food_at/values/color.dart';
@@ -25,7 +26,8 @@ class ProductViewModel {
                         onTap: () {
                           Navigator.pop(context);
                         },
-                        child: Image.asset("assets/icons/delete.png")),
+                        child: SvgPicture.asset(
+                            "assets/icon_svg/icons8-delete-96.svg")),
                     Image.asset("assets/icons/minus.png"),
                     const Text(
                       "0.25 kg",
@@ -34,11 +36,12 @@ class ProductViewModel {
                     ),
                     Image.asset("assets/icons/plus.png"),
                     InkWell(
-                        onTap: () {
-                          model.setComplete(true);
-                          Navigator.pop(context);
-                        },
-                        child: Image.asset("assets/icons/buy.png")),
+                      onTap: () {
+                        model.setComplete(true);
+                        Navigator.pop(context);
+                      },
+                      child: SvgPicture.asset("assets/icons/buy-active.svg"),
+                    ),
                   ],
                 ),
               ),

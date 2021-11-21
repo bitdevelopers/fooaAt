@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_at/values/color.dart';
 import 'package:food_at/view/cart/cart_view.dart';
 import 'package:food_at/view/favorite/favorite_view.dart';
 import 'package:food_at/view/home/home_view.dart';
@@ -14,8 +15,50 @@ class BottomBarViewModel {
     Image.asset(
       "assets/icons/feather.png",
     ),
-    Image.asset(
-      "assets/icons/group.png",
+    Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Container(
+              margin: EdgeInsets.only(top: 10),
+              width: 20,
+              height: 20,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: AppColor.primaryColor,
+                borderRadius: BorderRadius.circular(25),
+              ),
+              child: const Text(
+                "25",
+                style: TextStyle(
+                  fontSize: 12,
+                  color: Colors.white,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: const [
+                Text(
+                  "100",
+                  style: TextStyle(color: AppColor.primaryColor, fontSize: 12),
+                ),
+                Text(
+                  "JD",
+                  style: TextStyle(color: AppColor.primaryColor, fontSize: 12),
+                )
+              ],
+            )
+          ],
+        ),
+        Image.asset(
+          "assets/icons/group.png",
+        ),
+      ],
     ),
     Image.asset(
       "assets/icons/heart.png",
