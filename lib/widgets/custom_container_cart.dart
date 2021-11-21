@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:food_at/locale/locale.dart';
 import 'package:food_at/values/color.dart';
 import 'package:food_at/values/styles.dart';
@@ -102,7 +103,7 @@ class CustomConatinerCart extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  Image.asset("assets/icons/delete.png"),
+                  SvgPicture.asset("assets/icon_svg/icons8-delete-96.svg"),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.center,

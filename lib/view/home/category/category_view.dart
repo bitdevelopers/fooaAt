@@ -34,7 +34,7 @@ class _CategoryViewState extends State<CategoryView> {
                 children: [
                   model.locale == const Locale("en")
                       ? CustomContainerInfinity(
-                          image: "assets/icons/icon_arrow_back.png",
+                          image: "assets/icon_svg/ios-arrow-back.svg",
                           title: 'shop',
                           color: AppColor.colorHomeContainer,
                           onTap: () {

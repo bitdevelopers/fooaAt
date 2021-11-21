@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:food_at/locale/locale.dart';
 import 'package:food_at/values/color.dart';
 import 'package:food_at/values/styles.dart';
@@ -38,14 +39,16 @@ class CustomHalfContainerArabic extends StatelessWidget {
                       style: Styles.textFontSize18,
                     ),
                   ),
-                  Image.asset(image),
+                  SvgPicture.asset(image),
                 ],
               )
             : Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Expanded(child: Image.asset(image)),
+                  Expanded(
+                    child: SvgPicture.asset(image),
+                  ),
                   Expanded(
                     flex: 4,
                     child: Text(

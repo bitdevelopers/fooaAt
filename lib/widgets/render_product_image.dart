@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:food_at/locale/locale.dart';
 import 'package:food_at/values/color.dart';
 import 'package:food_at/values/styles.dart';
@@ -128,13 +129,14 @@ class RenderProductImage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     InkWell(
-                      child: Image.asset("assets/icons/love-96.png"),
+                      child: SvgPicture.asset(
+                          "assets/icon_svg/icons8-love-96.svg"),
                       onTap: () {
                         model.addFavorite(data);
                       },
                     ),
                     InkWell(
-                      child: Image.asset("assets/icons/buy-2.png"),
+                      child: SvgPicture.asset("assets/icons/buy-active.svg"),
                       onTap: () {},
                     ),
                   ],

@@ -6,83 +6,83 @@ class HomeViewModel {
   // ignore: prefer_final_fields
   List<HomeModel> listVertical = [
     HomeModel(
-      image: "assets/icons_home/category.png",
+      image: "assets/icons_home/category.svg",
       title: "shopCategory",
     ),
     HomeModel(
-      image: "assets/icons_home/shopping_Cart.png",
+      image: "assets/icons_home/Shopping Cart.svg",
       title: "shopBrand",
     ),
     HomeModel(
-      image: "assets/icons_home/rearrange.png",
+      image: "assets/icons_home/rearrange.svg",
       title: "shophistory",
     ),
     HomeModel(
-      image: "assets/icons_home/shopping_tag.png",
+      image: "assets/icons_home/shopping tag.svg",
       title: "offers",
     ),
   ];
 
   List<HomeModel> listHorzental = [
     HomeModel(
-      image: "assets/icons_home/organic.png",
+      image: "assets/icons_home/organic.svg",
       title: "Organic",
       imageRight: false,
     ),
     HomeModel(
-      image: "assets/icons_home/sugar-free.png",
+      image: "assets/icons_home/sugar-free.svg",
       title: "sugar",
       imageRight: true,
     ),
     HomeModel(
-      image: "assets/icons_home/Oil.png",
+      image: "assets/icons_home/Oil.svg",
       title: "Low fat",
       imageRight: false,
     ),
     HomeModel(
-      image: "assets/icons_home/Gluten_Free.png",
+      image: "assets/icons_home/Oil.svg",
       title: "Gluten free",
       imageRight: true,
     ),
     HomeModel(
-      image: "assets/icons_home/food.png",
+      image: "assets/icons_home/actose-food.svg",
       title: "Vegan",
       imageRight: false,
     ),
     HomeModel(
-      image: "assets/icons_home/bread.png",
+      image: "assets/icons_home/bread.svg",
       title: "Low carb",
       imageRight: true,
     ),
   ];
   List<HomeModel> listHorzentalArabic = [
     HomeModel(
-      image: "assets/icons_home/sugar-free.png",
+      image: "assets/icons_home/sugar-free.svg",
       title: "sugar",
       imageRight: true,
     ),
     HomeModel(
-      image: "assets/icons_home/organic.png",
+      image: "assets/icons_home/organic.svg",
       title: "Organic",
       imageRight: false,
     ),
     HomeModel(
-      image: "assets/icons_home/Gluten_Free.png",
+      image: "assets/icons_home/Oil.svg",
       title: "Gluten free",
       imageRight: true,
     ),
     HomeModel(
-      image: "assets/icons_home/Oil.png",
+      image: "assets/icons_home/Oil.svg",
       title: "Low fat",
       imageRight: false,
     ),
     HomeModel(
-      image: "assets/icons_home/bread.png",
+      image: "assets/icons_home/bread.svg",
       title: "Low carb",
       imageRight: true,
     ),
     HomeModel(
-      image: "assets/icons_home/food.png",
+      image: "assets/icons_home/actose-food.svg",
       title: "Vegan",
       imageRight: false,
     ),
@@ -106,82 +106,3 @@ class HomeViewModel {
     )
   ];
 }
-
-
-//  model.locale == const Locale("ar")
-//                         ? Row(
-//                             children: const [
-//                               Expanded(
-//                                   child: CustomHalfContainerArabic(
-//                                 image: "assets/icons_home/sugar-free.png",
-//                                 title: "sugar",
-//                                 imageRight: true,
-//                               )),
-//                               SizedBox(
-//                                 width: 5.0,
-//                               ),
-//                               Expanded(
-//                                   child: CustomHalfContainerArabic(
-//                                 image: "assets/icons_home/organic.png",
-//                                 title: "Organic",
-//                                 imageRight: false,
-//                               )),
-//                             ],
-//                           )
-//                         : Row(
-//                             children: const [
-//                               Expanded(
-//                                   child: CustomHalfContainer(
-//                                 image: "assets/icons_home/organic.png",
-//                                 title: "Organic",
-//                                 imageRight: false,
-//                               )),
-//                               SizedBox(
-//                                 width: 5.0,
-//                               ),
-//                               Expanded(
-//                                   child: CustomHalfContainer(
-//                                 image: "assets/icons_home/sugar-free.png",
-//                                 title: "sugar",
-//                                 imageRight: true,
-//                               )),
-//                             ],
-//                           ),
-//                     Row(
-//                       children: const [
-//                         Expanded(
-//                             child: CustomHalfContainer(
-//                           image: "assets/icons_home/Oil.png",
-//                           title: "Low fat",
-//                           imageRight: false,
-//                         )),
-//                         SizedBox(
-//                           width: 5.0,
-//                         ),
-//                         Expanded(
-//                             child: CustomHalfContainer(
-//                           image: "assets/icons_home/Gluten_Free.png",
-//                           title: "Gluten free",
-//                           imageRight: true,
-//                         )),
-//                       ],
-//                     ),
-//                     Row(
-//                       children: const [
-//                         Expanded(
-//                             child: CustomHalfContainer(
-//                           image: "assets/icons_home/food.png",
-//                           title: "Vegan",
-//                           imageRight: false,
-//                         )),
-//                         SizedBox(
-//                           width: 5.0,
-//                         ),
-//                         Expanded(
-//                             child: CustomHalfContainer(
-//                           image: "assets/icons_home/bread.png",
-//                           title: "Low carb",
-//                           imageRight: true,
-//                         )),
-//                       ],
-//                     ),

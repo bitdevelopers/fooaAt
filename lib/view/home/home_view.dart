@@ -88,6 +88,9 @@ class _HomeViewState extends State<HomeView> {
                               crossAxisSpacing: 5,
                               mainAxisSpacing: 5),
                     ),
+                    const SizedBox(
+                      height: 5,
+                    ),
                     const SliderWidget()
                   ],
                 ),

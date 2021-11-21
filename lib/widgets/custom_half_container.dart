@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:food_at/locale/locale.dart';
 import 'package:food_at/values/color.dart';
 import 'package:food_at/values/styles.dart';
@@ -28,12 +29,12 @@ class CustomHalfContainer extends StatelessWidget {
         ),
         child: imageRight == false
             ? Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Image.asset(image),
+                  SvgPicture.asset(image),
                   const SizedBox(
-                    width: 30.0,
+                    width: 20.0,
                   ),
                   Flexible(
                     child: Text(
@@ -53,7 +54,7 @@ class CustomHalfContainer extends StatelessWidget {
                       style: Styles.textFontSize18,
                     ),
                   ),
-                  Image.asset(image),
+                  SvgPicture.asset(image),
                 ],
               ),
       ),
