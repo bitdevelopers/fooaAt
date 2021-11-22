@@ -40,7 +40,6 @@ class CustomContainerSetting extends StatelessWidget {
                 InkWell(
                   onTap: () {
                     model.setLocale(const Locale("en"));
-                    model.changeLanguage(const Locale("en"));
                   },
                   child: Row(
                     children: [
@@ -62,7 +61,6 @@ class CustomContainerSetting extends StatelessWidget {
                   onTap: () {
                     //change language t ar
                     model.setLocale(const Locale("ar"));
-                    model.changeLanguage(const Locale("ar"));
                   },
                   child: Row(
                     children: [
